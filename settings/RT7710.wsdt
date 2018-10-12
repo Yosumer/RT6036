@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>RT7710/Debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>242</Column0><Column1>4</Column1><Column2>1</Column2><Column3>0</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1035</ColumnWidth1><ColumnWidth2>276</ColumnWidth2><ColumnWidth3>69</ColumnWidth3></Build>
+      <Find-in-Files>
+        
+        
+        
+      <ColumnWidth0>496</ColumnWidth0><ColumnWidth1>70</ColumnWidth1><ColumnWidth2>850</ColumnWidth2></Find-in-Files>
+    <TerminalIO/><Debug-Log><ColumnWidth0>26</ColumnWidth0><ColumnWidth1>1301</ColumnWidth1></Debug-Log></Static>
+    <Windows>
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-4264-7782</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>RT7710</ExpandedNode><ExpandedNode>RT7710/Local</ExpandedNode><ExpandedNode>RT7710/Local/main.c</ExpandedNode><ExpandedNode>RT7710/Peripheral</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-9261-7893</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-30424-9134</Identity>
+            <TabName>Find in Files</TabName>
+            <Factory>Find-in-Files</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-29004-22056</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd1></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\SlideMotor.c</Filename><XPos>0</XPos><YPos>210</YPos><SelStart>5748</SelStart><SelEnd>5748</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\KnockMotor.h</Filename><XPos>0</XPos><YPos>59</YPos><SelStart>2425</SelStart><SelEnd>2425</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\emlib\src\em_timer.c</Filename><XPos>0</XPos><YPos>12</YPos><SelStart>1439</SelStart><SelEnd>1439</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\EFM32_def.h</Filename><XPos>0</XPos><YPos>74</YPos><SelStart>707</SelStart><SelEnd>707</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Device\EnergyMicro\EFM32LG\Include\efm32lg_usart.h</Filename><XPos>0</XPos><YPos>32</YPos><SelStart>3500</SelStart><SelEnd>3500</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\KneadMotor.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>2472</SelStart><SelEnd>2472</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\emlib\src\em_gpio.c</Filename><XPos>0</XPos><YPos>193</YPos><SelStart>7756</SelStart><SelEnd>7756</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\emlib\inc\em_timer.h</Filename><XPos>0</XPos><YPos>83</YPos><SelStart>3701</SelStart><SelEnd>3701</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\WalkMotor.h</Filename><XPos>0</XPos><YPos>87</YPos><SelStart>567</SelStart><SelEnd>567</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\DMAUart.h</Filename><XPos>0</XPos><YPos>9</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Hot_Roller.c</Filename><XPos>0</XPos><YPos>89</YPos><SelStart>3351</SelStart><SelEnd>3351</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\DMAUart.c</Filename><XPos>0</XPos><YPos>122</YPos><SelStart>4784</SelStart><SelEnd>4784</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\emlib\inc\em_usart.h</Filename><XPos>0</XPos><YPos>571</YPos><SelStart>26328</SelStart><SelEnd>26328</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\emlib\src\em_wdog.c</Filename><XPos>0</XPos><YPos>88</YPos><SelStart>3803</SelStart><SelEnd>3803</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\valve.h</Filename><XPos>0</XPos><YPos>19</YPos><SelStart>1010</SelStart><SelEnd>1010</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\BackPad.c</Filename><XPos>0</XPos><YPos>251</YPos><SelStart>6972</SelStart><SelEnd>6972</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\WalkMotor.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>288</SelStart><SelEnd>288</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\system.c</Filename><XPos>0</XPos><YPos>164</YPos><SelStart>6494</SelStart><SelEnd>6494</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Power.c</Filename><XPos>0</XPos><YPos>14</YPos><SelStart>659</SelStart><SelEnd>659</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\KnockMotor.c</Filename><XPos>0</XPos><YPos>50</YPos><SelStart>2182</SelStart><SelEnd>2182</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\emlib\inc\em_gpio.h</Filename><XPos>0</XPos><YPos>510</YPos><SelStart>18417</SelStart><SelEnd>18417</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\BlueTooth.c</Filename><XPos>0</XPos><YPos>146</YPos><SelStart>5467</SelStart><SelEnd>5467</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\KneadMotor.c</Filename><XPos>0</XPos><YPos>123</YPos><SelStart>4036</SelStart><SelEnd>4036</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\backaction.h</Filename><XPos>0</XPos><YPos>23</YPos><SelStart>1346</SelStart><SelEnd>1346</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\airbagaction.h</Filename><XPos>0</XPos><YPos>33</YPos><SelStart>3062</SelStart><SelEnd>3062</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\memory.c</Filename><XPos>0</XPos><YPos>3</YPos><SelStart>250</SelStart><SelEnd>250</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\adc_single.c</Filename><XPos>0</XPos><YPos>394</YPos><SelStart>12705</SelStart><SelEnd>12705</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Valve.c</Filename><XPos>0</XPos><YPos>842</YPos><SelStart>20583</SelStart><SelEnd>20583</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\main.c</Filename><XPos>0</XPos><YPos>12200</YPos><SelStart>406001</SelStart><SelEnd>406001</SelEnd></Tab><ActiveTab>28</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Timer.c</Filename><XPos>0</XPos><YPos>18</YPos><SelStart>533</SelStart><SelEnd>533</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Data_Cul.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>502</SelStart><SelEnd>502</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Data_Cul.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>199</SelStart><SelEnd>199</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\memory.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>864</SelStart><SelEnd>864</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\MassageStatus.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>503</SelStart><SelEnd>503</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Input.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>126</SelStart><SelEnd>126</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\input.h</Filename><XPos>0</XPos><YPos>53</YPos><SelStart>2005</SelStart><SelEnd>2027</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\MotorPosCheckRx.c</Filename><XPos>0</XPos><YPos>75</YPos><SelStart>2911</SelStart><SelEnd>2911</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\FlexPad.c</Filename><XPos>0</XPos><YPos>39</YPos><SelStart>2006</SelStart><SelEnd>2006</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\FlexPad.h</Filename><XPos>0</XPos><YPos>33</YPos><SelStart>3775</SelStart><SelEnd>3775</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\ControlBox.h</Filename><XPos>0</XPos><YPos>90</YPos><SelStart>4875</SelStart><SelEnd>4902</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-01377dc8><key>iaridepm.enu1</key></Toolbar-01377dc8></Sizes></Row0><Row1><Sizes/></Row1></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>634</Bottom><Right>284</Right><x>-2</x><y>-2</y><xscreen>1075</xscreen><yscreen>67</yscreen><sizeHorzCX>746528</sizeHorzCX><sizeHorzCY>81311</sizeHorzCY><sizeVertCX>198611</sizeVertCX><sizeVertCY>771845</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>145</Bottom><Right>1442</Right><x>-2</x><y>-2</y><xscreen>1444</xscreen><yscreen>147</yscreen><sizeHorzCX>1002778</sizeHorzCX><sizeHorzCY>178398</sizeHorzCY><sizeVertCX>56944</sizeVertCX><sizeVertCY>81311</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

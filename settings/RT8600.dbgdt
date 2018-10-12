@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Project>
+  <Desktop>
+    <Static>
+      <Debug-Log>
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1381</ColumnWidth1></Debug-Log>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1035</ColumnWidth1><ColumnWidth2>276</ColumnWidth2><ColumnWidth3>69</ColumnWidth3></Build>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>196</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Disassembly>
+        <col-names>
+          
+          
+        <item>Disassembly</item><item>_I0</item></col-names>
+        <col-widths>
+          
+          
+        <item>500</item><item>20</item></col-widths>
+        <DisasmHistory/>
+        
+        
+        <PreferedWindows>
+          
+          
+          
+          
+        <Position>4</Position><ScreenPosX>946</ScreenPosX><ScreenPosY>277</ScreenPosY><Windows/></PreferedWindows>
+      <ShowCodeCoverage>0</ShowCodeCoverage><ShowInstrProfiling>0</ShowInstrProfiling></Disassembly>
+      <TerminalIO>
+        
+        
+        
+        
+        
+      <PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><InputSource>1</InputSource><InputMode>10</InputMode><Filename>$PROJ_DIR$\TermIOInput.txt</Filename><InputEcho>1</InputEcho><ShowReset>0</ShowReset></TerminalIO>
+      <Find-in-Files>
+        
+        
+        
+      <ColumnWidth0>496</ColumnWidth0><ColumnWidth1>70</ColumnWidth1><ColumnWidth2>850</ColumnWidth2></Find-in-Files>
+    <WATCH_1><expressions><item>w_Time</item><item>OutBuffer</item><item>time</item><item>Main_Shoulder_Detect</item><item>nShoulderPosition</item><item>timerInit</item><item>w_RollerPWM</item><item>nKnockMotorControlParam2</item><item>nCurKnockRunStopCounter</item><item>ctrlType</item><item>OutBuffer[0]</item><item>w_ADC_Result</item><item>password</item><item>nCurKnockRunStopCounter</item><item>GlobalFlags6</item><item>engineerData2old</item><item>engineerData2old</item><item>nReworkShoulderPosition</item><item>nCurKneadKnockSpeed</item><item>nChairRunState</item><item>bMassagePositionUpdate</item><item>bBackLegPadSettle</item><item>key</item><item></item></expressions><col-names><item>Expression</item><item>Location</item><item>Type</item><item>Value</item></col-names><col-widths><item>204</item><item>150</item><item>100</item><item>339</item></col-widths></WATCH_1><Register><PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows></Register><Breakpoints><col-names><item>Breakpoint</item><item>_I0</item></col-names><col-widths><item>500</item><item>35</item></col-widths></Breakpoints><Locals><col-names><item>Location</item><item>Type</item><item>Value</item><item>Variable</item></col-names><col-widths><item>150</item><item>100</item><item>153</item><item>181</item></col-widths></Locals><Memory><FindDirection>1</FindDirection><FindAsHex>0</FindAsHex></Memory></Static>
+    <Windows>
+      
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-18437-8554</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>RT8600</ExpandedNode><ExpandedNode>RT8600/Local</ExpandedNode><ExpandedNode>RT8600/Peripheral</ExpandedNode><ExpandedNode>RT8600/Software</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1><Tabs><Tab><Identity>TabID-11875-6937</Identity><TabName>Watch 1</TabName><Factory>WATCH_1</Factory></Tab><Tab><Identity>TabID-11260-19459</Identity><TabName>Locals</TabName><Factory>Locals</Factory></Tab><Tab><Identity>TabID-2408-27096</Identity><TabName>Disassembly</TabName><Factory>Disassembly</Factory><Session/></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd1><Wnd5><Tabs><Tab><Identity>TabID-21423-19064</Identity><TabName>Breakpoints</TabName><Factory>Breakpoints</Factory></Tab><Tab>
+            <Identity>TabID-7689-8551</Identity>
+            <TabName>Debug Log</TabName>
+            <Factory>Debug-Log</Factory>
+            <Session/>
+          </Tab><Tab>
+            <Identity>TabID-7166-8561</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab><Tab>
+            <Identity>TabID-28834-768</Identity>
+            <TabName>Find in Files</TabName>
+            <Factory>Find-in-Files</Factory>
+            <Session/>
+          </Tab></Tabs><SelectedTab>1</SelectedTab></Wnd5><Wnd8><Tabs><Tab><Identity>TabID-2242-5709</Identity><TabName>Memory</TabName><Factory>Memory</Factory><Session><ZoneNumber>0</ZoneNumber><SelectionAnchor>266338534</SelectionAnchor><SelectionEnd>266338534</SelectionEnd><UnitsPerGroup>1</UnitsPerGroup><EndianMode>0</EndianMode><DataCovEnabled>0</DataCovEnabled><DataCovShown>0</DataCovShown><AutoRefresh>0</AutoRefresh><HScroll>0</HScroll><VScroll>16646151</VScroll></Session></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd8><Wnd9><Tabs><Tab><Identity>TabID-23526-10228</Identity><TabName>Register</TabName><Factory>Register</Factory><Session><REG1>0</REG1><REG2>0</REG2><Group>31</Group><States>1</States><State0>TIMER1_ROUTE</State0></Session></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd9></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\main.c</Filename><XPos>0</XPos><YPos>6757</YPos><SelStart>263695</SelStart><SelEnd>263695</SelEnd></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\DMAUart.c</Filename><XPos>0</XPos><YPos>132</YPos><SelStart>4675</SelStart><SelEnd>4675</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Power.c</Filename><XPos>0</XPos><YPos>39</YPos><SelStart>1085</SelStart><SelEnd>1085</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Valve.c</Filename><XPos>0</XPos><YPos>104</YPos><SelStart>3263</SelStart><SelEnd>3263</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-013700d8><key>iaridepm.enu1</key></Toolbar-013700d8></Sizes></Row0><Row1><Sizes><Toolbar-0b2da5f0><key>debuggergui.enu1</key></Toolbar-0b2da5f0></Sizes></Row1><Row2><Sizes><Toolbar-0b29aa30><key>armjlink.enu1</key></Toolbar-0b29aa30></Sizes></Row2></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>477</Bottom><Right>287</Right><x>-2</x><y>-2</y><xscreen>466</xscreen><yscreen>201</yscreen><sizeHorzCX>323611</sizeHorzCX><sizeHorzCY>243932</sizeHorzCY><sizeVertCX>200694</sizeVertCX><sizeVertCY>581311</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>477</Bottom><Right>370</Right><x>-2</x><y>-2</y><xscreen>740</xscreen><yscreen>213</yscreen><sizeHorzCX>513889</sizeHorzCX><sizeHorzCY>258495</sizeHorzCY><sizeVertCX>258333</sizeVertCX><sizeVertCY>581311</sizeVertCY></Rect></Wnd1></Sizes></Row0><Row1><Sizes><Wnd9><Rect><Top>-2</Top><Left>368</Left><Bottom>477</Bottom><Right>438</Right><x>368</x><y>-2</y><xscreen>411</xscreen><yscreen>204</yscreen><sizeHorzCX>285417</sizeHorzCX><sizeHorzCY>247573</sizeHorzCY><sizeVertCX>48611</sizeVertCX><sizeVertCY>581311</sizeVertCY></Rect></Wnd9></Sizes></Row1></Right><Bottom><Row0><Sizes><Wnd5><Rect><Top>-2</Top><Left>-2</Left><Bottom>223</Bottom><Right>1442</Right><x>-2</x><y>-2</y><xscreen>1444</xscreen><yscreen>225</yscreen><sizeHorzCX>1002778</sizeHorzCX><sizeHorzCY>273058</sizeHorzCY><sizeVertCX>513889</sizeVertCX><sizeVertCY>258495</sizeVertCY></Rect></Wnd5></Sizes></Row0><Row1><Sizes><Wnd8><Rect><Top>221</Top><Left>-2</Left><Bottom>254</Bottom><Right>1442</Right><x>-2</x><y>221</y><xscreen>1444</xscreen><yscreen>33</yscreen><sizeHorzCX>1002778</sizeHorzCX><sizeHorzCY>40049</sizeHorzCY><sizeVertCX>309028</sizeVertCX><sizeVertCY>250000</sizeVertCY></Rect></Wnd8></Sizes></Row1></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Project>
+
+

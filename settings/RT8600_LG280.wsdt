@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>RT8600_LG280/Debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>298</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1035</ColumnWidth1><ColumnWidth2>276</ColumnWidth2><ColumnWidth3>69</ColumnWidth3></Build>
+    <TerminalIO/><Debug-Log><ColumnWidth0>19</ColumnWidth0><ColumnWidth1>1382</ColumnWidth1></Debug-Log><Find-in-Files><ColumnWidth0>496</ColumnWidth0><ColumnWidth1>70</ColumnWidth1><ColumnWidth2>850</ColumnWidth2></Find-in-Files></Static>
+    <Windows>
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-30710-5884</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>RT8600_LG280</ExpandedNode><ExpandedNode>RT8600_LG280/Local</ExpandedNode><ExpandedNode>RT8600_LG280/Peripheral</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-6369-6136</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-32754-15388</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab><Tab><Identity>TabID-29420-23734</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>2</SelectedTab></Wnd1></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\BackPad.c</Filename><XPos>0</XPos><YPos>30</YPos><SelStart>1466</SelStart><SelEnd>1466</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\FlexPad.c</Filename><XPos>0</XPos><YPos>41</YPos><SelStart>2006</SelStart><SelEnd>2006</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\LED_RGB.c</Filename><XPos>0</XPos><YPos>129</YPos><SelStart>5706</SelStart><SelEnd>5706</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\LegMotor.c</Filename><XPos>0</XPos><YPos>23</YPos><SelStart>1095</SelStart><SelEnd>1095</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\SlideMotor.c</Filename><XPos>0</XPos><YPos>211</YPos><SelStart>5748</SelStart><SelEnd>5748</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\WalkMotor.c</Filename><XPos>0</XPos><YPos>34</YPos><SelStart>1768</SelStart><SelEnd>1768</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\ControlBox.h</Filename><XPos>0</XPos><YPos>131</YPos><SelStart>5879</SelStart><SelEnd>5879</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\BlueTooth.c</Filename><XPos>0</XPos><YPos>201</YPos><SelStart>6875</SelStart><SelEnd>6875</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\DMAUart.c</Filename><XPos>0</XPos><YPos>251</YPos><SelStart>8118</SelStart><SelEnd>8118</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\emlib\src\em_wdog.c</Filename><XPos>0</XPos><YPos>171</YPos><SelStart>6141</SelStart><SelEnd>6141</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\main.c</Filename><XPos>0</XPos><YPos>3144</YPos><SelStart>92468</SelStart><SelEnd>92468</SelEnd></Tab><ActiveTab>10</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\system.c</Filename><XPos>0</XPos><YPos>213</YPos><SelStart>7563</SelStart><SelEnd>7563</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Input.c</Filename><XPos>0</XPos><YPos>219</YPos><SelStart>7429</SelStart><SelEnd>7446</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-013700c8><key>iaridepm.enu1</key></Toolbar-013700c8></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>529</Bottom><Right>389</Right><x>-2</x><y>-2</y><xscreen>361</xscreen><yscreen>411</yscreen><sizeHorzCX>250694</sizeHorzCX><sizeHorzCY>498786</sizeHorzCY><sizeVertCX>271528</sizeVertCX><sizeVertCY>644417</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>250</Bottom><Right>1442</Right><x>-2</x><y>-2</y><xscreen>1444</xscreen><yscreen>252</yscreen><sizeHorzCX>1002778</sizeHorzCX><sizeHorzCY>305825</sizeHorzCY><sizeVertCX>250694</sizeVertCX><sizeVertCY>498786</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

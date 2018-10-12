@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>RT8600/Debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>176</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1035</ColumnWidth1><ColumnWidth2>276</ColumnWidth2><ColumnWidth3>69</ColumnWidth3></Build>
+      <TerminalIO/>
+    <Find-in-Files><ColumnWidth0>336</ColumnWidth0><ColumnWidth1>48</ColumnWidth1><ColumnWidth2>860</ColumnWidth2></Find-in-Files><Debug-Log><ColumnWidth0>22</ColumnWidth0><ColumnWidth1>1379</ColumnWidth1></Debug-Log><Disassembly><PreferedWindows><Position>4</Position><ScreenPosX>951</ScreenPosX><ScreenPosY>302</ScreenPosY><Windows/></PreferedWindows></Disassembly></Static>
+    <Windows>
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-10951-4191</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>RT8600</ExpandedNode><ExpandedNode>RT8600/Local</ExpandedNode><ExpandedNode>RT8600/Peripheral</ExpandedNode><ExpandedNode>RT8600/Software</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-21176-4204</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-27837-12773</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab><Tab><Identity>TabID-15814-18115</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>1</SelectedTab></Wnd1></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\main.c</Filename><XPos>0</XPos><YPos>6810</YPos><SelStart>264989</SelStart><SelEnd>264989</SelEnd></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\DMAUart.c</Filename><XPos>0</XPos><YPos>132</YPos><SelStart>4675</SelStart><SelEnd>4675</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Power.c</Filename><XPos>0</XPos><YPos>39</YPos><SelStart>1085</SelStart><SelEnd>1085</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Valve.c</Filename><XPos>0</XPos><YPos>104</YPos><SelStart>3263</SelStart><SelEnd>3263</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-013700d8><key>iaridepm.enu1</key></Toolbar-013700d8></Sizes></Row0><Row1><Sizes/></Row1></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>626</Bottom><Right>267</Right><x>-2</x><y>-2</y><xscreen>0</xscreen><yscreen>113</yscreen><sizeHorzCX>0</sizeHorzCX><sizeHorzCY>137136</sizeHorzCY><sizeVertCX>186806</sizeVertCX><sizeVertCY>762136</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>153</Bottom><Right>1442</Right><x>-2</x><y>-2</y><xscreen>1444</xscreen><yscreen>155</yscreen><sizeHorzCX>1002778</sizeHorzCX><sizeHorzCY>188107</sizeHorzCY><sizeVertCX>0</sizeVertCX><sizeVertCY>137136</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+
