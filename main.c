@@ -6877,23 +6877,29 @@ void WaveMotorStop(void)
         }
     }
 }
+#endif
+
 //摇摆电机制函数
 void VibrateMotorControl(void)
 {
-    if(!bKeySeatVibrate)
+    if(!ValveFungares6)
     {
-        nKeySeatVibrateStrength = 0;
-        WaveMotorStop();
-        return;
+      SlideMotorControl(STATE_SLIDE_IDLE);
     }
-    if(bKeySeatEnable)
-        Waveringly_Set_Pwm_Data(VIB_STRENGTH[nKeySeatVibrateStrength]);
-    else
+    if(ValveFungares6&&bVibrateEnable)
     {
-        WaveMotorStop();
+      SlideMotorControl(STATE_RUN_SLIDE_FORWARD);
+    }
+    if(!ValveFungares4)
+    {
+      FlexMotor_Control(STATE_FLEX_IDLE,FLEX_SPEED_FAST,FLEX_CURRENT_3A);
+    }
+    if(ValveFungares4&&bVibrateEnable)
+    {
+      FlexMotor_Control(STATE_RUN_FLEX_TEST_OUT,FLEX_SPEED_FAST,FLEX_CURRENT_3A);
     }
 }
-#endif
+
 /********************************************/
 void MusicSampling(void)
 {
@@ -11801,7 +11807,7 @@ program_start:
 		#endif
 		/****************************/
 		//振动(摇摆)处理
-		//VibrateMotorControl() ;
+		VibrateMotorControl() ;
  		/*
 		if(nChairRunState == CHAIR_STATE_RUN)
 		{

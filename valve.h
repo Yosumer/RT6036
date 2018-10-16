@@ -254,6 +254,7 @@ struct WaveMotorStruct
 
 extern unsigned char* pValveData;
 extern unsigned char* pInputData;
+extern bool bKeyLeftVibrate,bKeyRightVibrate;
 void Valve_Initial_IO(void);
 //void Valve_Send_Data(unsigned char * ucData,unsigned char ucLength);
 //void Valve_Send_Data(unsigned char * ucSendData,unsigned char * ucReceiveData,unsigned char ucLength);

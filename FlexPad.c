@@ -341,14 +341,14 @@ unsigned char FlexMotor_Control(unsigned char nFinalFlexPadMotorState,unsigned c
     bPowerFlag = TRUE;
     break ;  
    case STATE_RUN_FLEX_TEST_OUT:  //小腿伸出直到碰到行程开关，测试用
-    if(Input_GetFlexOutSwitch() == REACH_FLEX_LIMIT || position == 2)
-    {
-      position = 2;
-      bPowerFlag = FALSE;
-      FlexMotor_Break();
-      nRetVal = FLEX_STOP_AT_OUT ;
-      break;
-    }
+   // if(Input_GetFlexOutSwitch() == REACH_FLEX_LIMIT || position == 2)
+   // {
+   //   position = 2;
+   //   bPowerFlag = FALSE;
+   //   FlexMotor_Break();
+   //   nRetVal = FLEX_STOP_AT_OUT ;
+   //   break;
+   // }
     position = 0;
     FlexMotor_Out();
     bPowerFlag = TRUE;

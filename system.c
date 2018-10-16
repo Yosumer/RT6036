@@ -142,6 +142,7 @@ void System_Initial_IO(void)
 //1ms interupt
 
 bool bFlag1ms;
+bool bVibrateEnable;
 void SysTick_Handler(void)
 {
   static BYTE by_Time5ms = 0;
@@ -149,7 +150,18 @@ void SysTick_Handler(void)
   static BYTE by_Time50ms = 0;
   static BYTE by_Time100ms = 0;
   static BYTE by_Time200ms = 0;
-  
+  static unsigned long by_Time3s = 0;
+
+  if(ValveFungares6||ValveFungares4)
+  {
+  if(by_Time3s >= 2000)
+  {
+    bVibrateEnable = 1;
+    by_Time3s = 0;
+  }
+  else ++by_Time3s;
+  }
+  else bVibrateEnable = 0;
   // only test DC airbag  
   /*
   static BYTE by_Time20ms = 0;
