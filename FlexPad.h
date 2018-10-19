@@ -137,6 +137,9 @@ int FlexMotor_Get_Fault(void);
 void FlexMotor_Out(void);    //电动小腿向外延伸，不带电源
 void FlexMotor_In(void);     //电动小腿向里收缩，不带电源
 unsigned char FlexMotor_Control(unsigned char nFinalFlexPadMotorState,unsigned char speed,unsigned char current);
+
+unsigned char VibrateRightMotorControl(unsigned char nFinalFlexPadMotorState,unsigned char speed);
+
 //void FlexMotorFollowingFood(void);//fww
 //void FlexMotorSetEnable(void);//fww
 //void FlexMotorSetDisable(void);//fww

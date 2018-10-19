@@ -143,6 +143,8 @@ void System_Initial_IO(void)
 
 bool bFlag1ms;
 bool bVibrateEnable;
+unsigned int Vibrate_Pwm_Speed;
+
 void SysTick_Handler(void)
 {
   static BYTE by_Time5ms = 0;
@@ -152,16 +154,20 @@ void SysTick_Handler(void)
   static BYTE by_Time200ms = 0;
   static unsigned long by_Time3s = 0;
 
-  if(ValveFungares6||ValveFungares4)
+  if(ValveFungares6||ValveFungares4||ValveFungares5||ValveFungares3)
   {
-  if(by_Time3s >= 2000)
+  if(by_Time3s >= 1000)
   {
     bVibrateEnable = 1;
     by_Time3s = 0;
   }
   else ++by_Time3s;
   }
-  else bVibrateEnable = 0;
+  else 
+  {
+    bVibrateEnable = 0;
+    Vibrate_Pwm_Speed = 0;
+  }
   // only test DC airbag  
   /*
   static BYTE by_Time20ms = 0;
@@ -208,7 +214,22 @@ void SysTick_Handler(void)
     by_Time10ms = 0;         
     //Input_10ms_Int();
     main_10ms_int();
-    LED_RGB_10ms_Int();
+    LED_RGB_10ms_Int();  
+    if(bVibrateEnable)
+    {
+      static char degree = 1;
+      if(degree)
+      {
+        Vibrate_Pwm_Speed++;
+        if(Vibrate_Pwm_Speed >= 130)
+        degree = 0;
+      }
+      else{
+        Vibrate_Pwm_Speed--;
+        if(Vibrate_Pwm_Speed <= 0)
+        degree = 1;
+      }
+    }
   }                          
   else ++by_Time10ms;
   

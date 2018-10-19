@@ -121,6 +121,11 @@ void FlexkMotor_Set_Pwm_Data(unsigned long ulDuty)
   TIMER_CompareBufSet(FLEX_MOTOR_TIMER, FLEX_MOTOR_TIMER_CHANNEL, duty);
 }
 
+void FlexkMotor_Set_Pwm(unsigned long ulDuty)
+{
+    TIMER_CompareBufSet(FLEX_MOTOR_TIMER, FLEX_MOTOR_TIMER_CHANNEL, ulDuty);
+}
+
 int FlexPower_On(unsigned char speed)
 {
   FlexkMotor_Set_Pwm_Data(speed);
@@ -369,7 +374,171 @@ unsigned char FlexMotor_Control(unsigned char nFinalFlexPadMotorState,unsigned c
   if(bPowerFlag == TRUE)
   {
     FlexPower_On(speed);
-    TIMER_CompareBufSet(FLEX_MOTOR_TIMER, FLEX_MOTOR_TIMER_CUR_CHANNEL, current); 
+    //TIMER_CompareBufSet(FLEX_MOTOR_TIMER, FLEX_MOTOR_TIMER_CUR_CHANNEL, current); 
+  }
+  else
+  {
+    FlexPower_Off();
+  }
+  return nRetVal ;
+}
+
+unsigned char VibrateRightMotorControl(unsigned char nFinalFlexPadMotorState,unsigned char speed)
+{
+  static unsigned int position = 0;
+  unsigned char nRetVal ;
+  
+  bool bPowerFlag;
+  nRetVal = FLEX_RUN;
+  //current = FLEX_CURRENT_2A;  //temp test
+  //140603
+  if(nFlexMotorRunStateOld != nFinalFlexPadMotorState)
+  {
+    nFlexMotorRunStateOld = nFinalFlexPadMotorState ;
+    position = 0 ;
+  }
+  
+  switch(nFinalFlexPadMotorState)
+  {
+   case STATE_RUN_FLEX_IN:
+    if(Input_GetFlexInSwitch() == REACH_FLEX_LIMIT || position == 1)
+    {
+      position = 1;
+      bPowerFlag = FALSE;
+      nRetVal = FLEX_STOP_AT_IN ;
+      FlexMotor_Break();
+      break;
+    }
+    
+    if((Input_GetFlexFootSwitch() == FOOT_SWITCH_ON) )
+    {  //碰到脚了
+      bPowerFlag = FALSE;
+      nRetVal = FLEX_STOP_AT_FOOT ;
+      FlexMotor_Break();
+      break;
+    }
+    //140531
+    Clear_Accident_flag() ;
+    position = 0;
+    bPowerFlag = TRUE;
+    FlexMotor_In();
+    
+    break ;
+   case STATE_RUN_FLEX_RESET: //强制收回
+    if(Input_GetFlexInSwitch() == REACH_FLEX_LIMIT || position == 1)
+    {
+      position = 1;
+      bPowerFlag = FALSE;
+      nRetVal = FLEX_STOP_AT_IN ;
+      FlexMotor_Break();
+      break;
+    }
+    position = 0;
+    bPowerFlag = TRUE;
+    FlexMotor_In();
+    
+    break ;
+    
+   case STATE_RUN_FLEX_OUT:  //上行
+    if(Input_GetFlexOutSwitch() == REACH_FLEX_LIMIT || position == 2)
+    {
+      //140531
+      Clear_Accident_flag() ;
+      
+      position = 2;
+      bPowerFlag = FALSE;
+      FlexMotor_Break();
+      nRetVal = FLEX_STOP_AT_OUT ;
+      break;
+    }
+    if(Input_GetFlexAngleSwitch() == LEGANGLE_SWITCH_ON)
+    { //小于15度
+      bPowerFlag = FALSE;
+      FlexMotor_Break();
+      nRetVal = FLEX_STOP_AT_ANGLE ;
+      break;
+    }
+    if(Input_GetFlexGroundSwitch() == LEGGROUND_SWITCH_ON)
+    { //碰到地面了
+      bPowerFlag = FALSE;
+      FlexMotor_Break();
+      nRetVal = FLEX_STOP_AT_GROUND;
+      break;
+    }
+    if(Input_GetFlexFootSwitch() == FOOT_SWITCH_OFF)
+    {  //碰不到脚了
+      bPowerFlag = FALSE;
+      nRetVal = FLEX_STOP_AT_FOOT_LEAVE ;
+      FlexMotor_Break();
+      break;
+    }
+    //140603
+    //Timer_Counter_Clear(FLEX_TIME_CHANNEL) ;
+    position = 0;
+    FlexMotor_Out();
+    bPowerFlag = TRUE;
+    break ;
+   case STATE_RUN_FLEX_MANUAL_OUT:  //小腿手动伸出
+    if(Input_GetFlexOutSwitch() == REACH_FLEX_LIMIT || position == 2)
+    {
+      nRetVal = FLEX_STOP_AT_OUT ;
+      Clear_Accident_flag() ;
+      
+      position = 2;
+      bPowerFlag = FALSE;
+      FlexMotor_Break();
+      
+      break;
+    }
+    if(Input_GetFlexGroundSwitch() == LEGGROUND_SWITCH_ON)
+    { //碰到地面了
+      bPowerFlag = FALSE;
+      FlexMotor_Break();
+      nRetVal = FLEX_STOP_AT_GROUND;
+      break;
+    }
+    if(Input_GetFlexAngleSwitch() == LEGANGLE_SWITCH_ON)
+    { //小于15度
+      bPowerFlag = FALSE;
+      FlexMotor_Break();
+      nRetVal = FLEX_STOP_AT_ANGLE ;
+      break;
+    }
+    Timer_Counter_Clear(FLEX_TIME_CHANNEL) ;
+    position = 0;
+    FlexMotor_Out();
+    bPowerFlag = TRUE;
+    break ;  
+   case STATE_RUN_FLEX_TEST_OUT:  //小腿伸出直到碰到行程开关，测试用
+   // if(Input_GetFlexOutSwitch() == REACH_FLEX_LIMIT || position == 2)
+   // {
+   //   position = 2;
+   //   bPowerFlag = FALSE;
+   //   FlexMotor_Break();
+   //   nRetVal = FLEX_STOP_AT_OUT ;
+   //   break;
+   // }
+    position = 0;
+    FlexMotor_Out();
+    bPowerFlag = TRUE;
+    break ;    
+   case STATE_FLEX_IDLE:
+    //140603
+    Timer_Counter_Clear(FLEX_TIME_CHANNEL) ;
+    //140526
+    position = 0;
+    bPowerFlag = FALSE;
+    FlexMotor_Break();
+    nRetVal = FLEX_STOP_AT_IDLE;
+    break ;
+   default://异常处理
+    break ;
+  }
+  //电源部分的处理
+  if(bPowerFlag == TRUE)
+  {
+    FlexkMotor_Set_Pwm(speed);
+    //TIMER_CompareBufSet(FLEX_MOTOR_TIMER, FLEX_MOTOR_TIMER_CUR_CHANNEL, speed); 
   }
   else
   {

@@ -37,7 +37,29 @@
 #define SLIDE_MOTOR_DEFAULT_TOP         BACK_MOTOR_DEFAULT_TOP
 #define SLIDE_SET_VOLTAGE    250000 //25V
 
+#define SLIDE_SPEED_STOP     0
+#define SLIDE_SPEED_SLOW     85
+#define SLIDE_SPEED_MID      110
+#define SLIDE_SPEED_FAST     131
+
+
 #define SLIDE_MOTOR_PRESCALE     timerPrescale8
+
+#define SLIDE_MOTOR_Timer_CCInit     \
+{                                   \
+    timerEventEveryEdge,            \
+    timerEdgeBoth,                  \
+    timerPRSSELCh0,                 \
+    timerOutputActionNone,          \
+    timerOutputActionNone,          \
+    timerOutputActionToggle,        \
+    timerCCModePWM,                 \
+    false,                          \
+    false,                          \
+    false,                          \
+    false,                          \
+} 
+
 
 #define SLIDE_MOTOR_Timer_Init       \
 {                                   \
@@ -91,6 +113,7 @@ void SlideMotor_Break(void);
 int SlideMotor_Get_Fault(void);
 unsigned int SlideMotor_Get_Location(void);
 unsigned char SlideMotorControl(unsigned char nFinalZeroPadMotorState);
+unsigned char VibrateLeftMotorControl(unsigned char nFinalZeroPadMotorState,unsigned char speed);
 
 int SlideMotor_GetPower(void);
 int SlideMotor_GetDirection(void);

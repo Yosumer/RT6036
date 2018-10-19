@@ -30,7 +30,7 @@ unsigned int ValveTestData = 0xffffff;
 #endif
 //#define OTG_MP3
 
-#define SINGLE_HEADER //单头丝杠
+//#define SINGLE_HEADER //单头丝杠
 //#define DOUBLE_HEADER //双头丝杠
 
 //ON/OFF键收藏功能配置
@@ -277,7 +277,7 @@ __no_init BITS GlobalFlags6 ;
 #define bMassagePositionUpdate 			GlobalFlags6.bD1
 #define bMarkSpace				GlobalFlags6.bD2
 #define bSendBuzzerMode 			GlobalFlags6.bD3
-//#define bLegPadMotorPowerFlag 			GlobalFlags6.bD4
+#define bDisplayDetect  			GlobalFlags6.bD4//20181019
 #define bMasterSendPacket 			GlobalFlags6.bD5
 #define bReconfigFlag 				GlobalFlags6.bD6
 #define bKneadWidthChange			GlobalFlags6.bD7
@@ -367,11 +367,11 @@ __no_init st_AirBag st_AirBagAuto0,st_AirBagAuto1,st_AirBagAuto2,st_AirBagAuto3;
 unsigned char nCurWalkMotorStateCounter ;//State Counter
 __no_init unsigned short nShoulderPosition, nShoulderPositionTop, nShoulderPositionBottom ; //Shoulder Position
 //default value according to the value of DEFAULT_SHOULDER_POSITION,can be modified
-#ifdef SINGLE_HEADER
+//#ifdef SINGLE_HEADER
 unsigned char WALK_MOTOR_ZONE[] = {28, 56, 84, 113, 142, 170} ;
-#else
-unsigned char WALK_MOTOR_ZONE[] = {14, 28, 42, 56, 71, 85} ;
-#endif
+//#else
+//unsigned char WALK_MOTOR_ZONE[] = {14, 28, 42, 56, 71, 85} ;
+//#endif
 __no_init unsigned short nFinalWalkMotorLocate ;
 //Knead Motor Variables
 unsigned char nCurKneadMotorState, nPrevKneadMotorState, nFinalKneadMotorState ;
@@ -2290,6 +2290,7 @@ void Main_BlueToothSend(void)
   }
 }
 //
+unsigned int data;
 void Main_Send(void)
 {
 	if(bMasterSendPacket)
@@ -2585,23 +2586,35 @@ void Main_Send(void)
           data = TOP_POSITION;   //手动模式使用自动形成
         }
         */
-        unsigned int data = Input_GetWalkMotorPosition();
+        data = Input_GetWalkMotorPosition();
         data /= 30;//31
         if(data >= 13) data = 13;
         OutBuffer[8] = data;
 
+//20181019
+//        if(nBackMainRunMode == BACK_MAIN_MODE_AUTO &&
+//                nReworkShoulderPosition == 2 && nBackSubRunMode != BACK_SUB_MODE_AUTO_5)   //开始检测
+//        {
+//            OutBuffer[9] = 0 << 6;
+//        }
+//        else
+//        {
+//            OutBuffer[9] = 0 << 6;
+//        }
 
-        if(nBackMainRunMode == BACK_MAIN_MODE_AUTO &&
-                nReworkShoulderPosition == 2 && nBackSubRunMode != BACK_SUB_MODE_AUTO_5)   //开始检测
-        {
-            OutBuffer[9] = 0 << 6;
-        }
-        else
-        {
-            OutBuffer[9] = 0 << 6;
-        }
-
-        if(nCurSubFunction == BACK_SUB_MODE_BODY_DETECT_1)
+//        if(nCurSubFunction == BACK_SUB_MODE_BODY_DETECT_1)
+//        {
+//            OutBuffer[9] |= 1 << 5;  //
+//            OutBuffer[9] |= 1 << 6;
+//        }
+//        else
+//        {
+//            OutBuffer[9] |= 0 << 5;  //
+//            OutBuffer[9] &= 0xbf ;//<< 6;
+//        }
+        OutBuffer[9] = 0;
+        
+        if(bDisplayDetect)
         {
             OutBuffer[9] |= 1 << 5;  //
             OutBuffer[9] |= 1 << 6;
@@ -6879,24 +6892,25 @@ void WaveMotorStop(void)
 }
 #endif
 
+
 //摇摆电机制函数
 void VibrateMotorControl(void)
 {
-    if(!ValveFungares6)
+    if((!ValveFungares6)&&(!ValveFungares5))
     {
-      SlideMotorControl(STATE_SLIDE_IDLE);
+      VibrateLeftMotorControl(STATE_SLIDE_IDLE,Vibrate_Pwm_Speed);
     }
-    if(ValveFungares6&&bVibrateEnable)
+    if((ValveFungares6||ValveFungares5)&&bVibrateEnable)
     {
-      SlideMotorControl(STATE_RUN_SLIDE_FORWARD);
+      VibrateLeftMotorControl(STATE_RUN_SLIDE_FORWARD,Vibrate_Pwm_Speed);
     }
-    if(!ValveFungares4)
+    if((!ValveFungares4)&&(!ValveFungares3))
     {
-      FlexMotor_Control(STATE_FLEX_IDLE,FLEX_SPEED_FAST,FLEX_CURRENT_3A);
+      VibrateRightMotorControl(STATE_FLEX_IDLE,Vibrate_Pwm_Speed);
     }
-    if(ValveFungares4&&bVibrateEnable)
+    if((ValveFungares4||ValveFungares3)&&bVibrateEnable)
     {
-      FlexMotor_Control(STATE_RUN_FLEX_TEST_OUT,FLEX_SPEED_FAST,FLEX_CURRENT_3A);
+      VibrateRightMotorControl(STATE_RUN_FLEX_TEST_OUT,Vibrate_Pwm_Speed);
     }
 }
 
@@ -8428,6 +8442,8 @@ void startBodyDetect(void)
     bodyDetectSuccess = 0;
     //检测步骤清零
     shoulderPositionScanStep = 0;
+    //20181019
+    bDisplayDetect = 1;
 }
 
 void Main_BackProce(void)
@@ -8472,7 +8488,7 @@ void Main_BackProce(void)
 #ifdef SINGLE_HEADER
                     nWalkMotorControlParam2 = Input_GetWalkMotorPosition() - 10 ;
 #else
-                    nWalkMotorControlParam2 = Input_GetWalkMotorPosition() - 5 ;
+                    nWalkMotorControlParam2 = Input_GetWalkMotorPosition() - 25 ;
 #endif
                     bWalkMotorInProcess = TRUE ;
                     bUpdateLocate = TRUE ;
@@ -8536,7 +8552,7 @@ void Main_BackProce(void)
 #ifdef SINGLE_HEADER
                     nWalkMotorControlParam2 = Input_GetWalkMotorPosition() - 10 ;
 #else
-                    nWalkMotorControlParam2 = Input_GetWalkMotorPosition() - 5 ;
+                    nWalkMotorControlParam2 = Input_GetWalkMotorPosition() - 25 ;
 #endif
                     bWalkMotorInProcess = TRUE ;
                     bUpdateLocate = TRUE ;
@@ -8594,7 +8610,7 @@ void Main_BackProce(void)
 #ifdef SINGLE_HEADER
                     nWalkMotorControlParam2 = Input_GetWalkMotorPosition() - 10 ;
 #else
-                    nWalkMotorControlParam2 = Input_GetWalkMotorPosition() - 5 ;
+                    nWalkMotorControlParam2 = Input_GetWalkMotorPosition() - 25 ;
 #endif
                     bWalkMotorInProcess = TRUE ;
                     bUpdateLocate = TRUE ;
@@ -8701,6 +8717,8 @@ void Main_BackProce(void)
 						}
 						//体型检测成功
 						bBodyDetectSuccess = TRUE ;
+                                                //20181019
+                                                bDisplayDetect = 0;
 						//继续下个动作
                     /*
                     nCurActionStep++ ;

@@ -22,6 +22,17 @@ void ZeroMotor_Initial_IO(void)
   GPIO_PinModeSet(SLIDE_MOTOR_PHASE_PORT, SLIDE_MOTOR_PHASE_BIT, SLIDE_MOTOR_PHASE_MODE, 0);
   GPIO_PinModeSet(SLIDE_MOTOR_DECAY_PORT, SLIDE_MOTOR_DECAY_BIT, SLIDE_MOTOR_DECAY_MODE, 0);
   GPIO_PinModeSet(SLIDE_MOTOR_FAULT_PORT, SLIDE_MOTOR_FAULT_BIT, SLIDE_MOTOR_FAULT_MODE, 1);
+
+  TIMER_InitCC_TypeDef timerCCInit = SLIDE_MOTOR_Timer_CCInit;
+  TIMER_InitCC(SLIDE_MOTOR_TIMER, SLIDE_MOTOR_CHANNEL, &timerCCInit);
+  TIMER_TopSet(SLIDE_MOTOR_TIMER, SLIDE_MOTOR_DEFAULT_TOP);
+  TIMER_CompareBufSet(SLIDE_MOTOR_TIMER, SLIDE_MOTOR_CHANNEL, 0);
+
+  TIMER_Init_TypeDef timerInit = SLIDE_MOTOR_Timer_Init;
+  TIMER_Init(SLIDE_MOTOR_TIMER, &timerInit);
+  SLIDE_MOTOR_TIMER->ROUTE |= (SLIDE_MOTOR_ROUTE_EN | \
+    SLIDE_MOTOR_ROUTE_LOCATION); 
+  TIMER_CompareBufSet(SLIDE_MOTOR_TIMER, SLIDE_MOTOR_CHANNEL, 80);
 }
 void SlideMotor_Reset(void)
 {
@@ -189,6 +200,71 @@ unsigned char SlideMotorControl(unsigned char nFinalZeroPadMotorState)
   else
   {
     SlideMotorPower_Off();
+  }
+  return nRetVal ;
+}
+
+unsigned char VibrateLeftMotorControl(unsigned char nFinalZeroPadMotorState,unsigned char speed)
+{
+  static unsigned int position = 0;
+  unsigned char nRetVal ;
+  bool bPowerFlag;
+  nRetVal = FALSE ;
+  
+  bool enable = ReadEEByte(USER_DATA_BASE + SLIDE_MOTOR_ENABLE_ADDRESS);
+  if(!enable) 
+  {
+    SlideMotorPower_Off();
+    SlideMotor_Break();
+    return TRUE;
+  }
+  switch(nFinalZeroPadMotorState)
+  {
+  case STATE_RUN_SLIDE_BACKWARD:
+    if(Input_GetSlideBackwardSwitch() == REACH_SLIDE_LIMIT || position == 1) 
+    {
+      position = 1;
+      nRetVal = TRUE ;
+      SlideMotor_Break();
+      bPowerFlag = FALSE;
+      break;
+    }
+    position = 0;
+    //SlideMotor_Set_Route();
+    SlideMotor_Backward();
+    bPowerFlag = TRUE;
+    break ;
+  case STATE_RUN_SLIDE_FORWARD:
+    if(Input_GetSlideForwardSwitch() == REACH_SLIDE_LIMIT || position == 2)
+    {
+      position = 2;
+      bPowerFlag = FALSE;
+      nRetVal = TRUE ;
+      SlideMotor_Break();
+      break;
+    }
+    position = 0;
+    //SlideMotor_Set_Route();
+    SlideMotor_Forward();
+    bPowerFlag = TRUE;
+    break ;
+  case STATE_SLIDE_IDLE:
+    nRetVal = TRUE ;
+    //SlideMotor_Set_Route();
+    SlideMotor_Break();
+    bPowerFlag = FALSE;
+    break ;
+  default://异常处理
+    break ;
+  }
+  //电源部分的处理
+  if(bPowerFlag == TRUE)
+  {
+    SlideMotor_Set_PWM(speed);
+  }
+  else
+  {
+    SlideMotor_Set_PWM(0);
   }
   return nRetVal ;
 }
