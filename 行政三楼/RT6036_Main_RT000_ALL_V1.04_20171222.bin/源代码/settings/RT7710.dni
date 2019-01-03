@@ -1,0 +1,121 @@
+[Stack]
+FillEnabled=0
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnLogOnly=1
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[DebugChecksum]
+Checksum=418958109
+[Exceptions]
+StopOnUncaught=_ 0
+StopOnThrow=_ 0
+[CallStack]
+ShowArgs=0
+[Disassembly]
+MixedMode=1
+[SWOTraceHWSettings]
+OverrideDefaultClocks=0
+CpuClock=72000000
+ClockAutoDetect=0
+ClockWanted=2000000
+JtagSpeed=2250000
+Prescaler=32
+TimeStampPrescIndex=0
+TimeStampPrescData=0
+PcSampCYCTAP=1
+PcSampPOSTCNT=15
+PcSampIndex=0
+DataLogMode=0
+ITMportsEnable=0
+ITMportsTermIO=0
+ITMportsLogFile=0
+ITMlogFile=$PROJ_DIR$\ITM.log
+[array_types]
+Fmt0=unsigned char[3]	1	0
+[watch_formats]
+Fmt0={W}0:password	4	0
+[PowerLog]
+LogEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=0
+Title0=I0
+Setup0=0 1 0 500000 2 0 4 0 0
+LiveEnabled=0
+LiveFile=PowerLogLive.log
+[DataLog]
+LogEnabled=0
+SumEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=1
+[EventLog]
+LogEnabled=0
+SumEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=1
+Title0=ITM1
+Setup0=1 1 1 1
+Title1=ITM2
+Setup1=1 1 1 1
+Title2=ITM3
+Setup2=1 1 1 1
+Title3=ITM4
+Setup3=1 1 1 1
+SumSortOrder=0
+[InterruptLog]
+LogEnabled=0
+SumEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=1
+SumSortOrder=0
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[Trace2]
+Enabled=0
+[SWOTraceWindow]
+PcSampling=0
+InterruptLogs=0
+ForcedTimeStamps=0
+EventCPI=0
+EventEXC=0
+EventFOLD=0
+EventLSU=0
+EventSLEEP=0
+[PowerProbe]
+Frequency=10000
+Probe0=I0
+ProbeSetup0=2 1 1 2 0 0
+[CallStackLog]
+Enabled=0
+[DriverProfiling]
+Enabled=0
+Mode=3
+Graph=0
+Symbiont=0
+Exclusions=
+[Disassemble mode]
+mode=0
+[Breakpoints2]
+Count=0
+[Aliases]
+A0=_ "C:\Documents and Settings\rt3473\桌面\7xi实验\RT7700\main.c" "C:\Users\Administrator\Desktop\fww\RT7700\main.c"
+A1=_ "C:\Documents and Settings\rt3473\桌面\rt7700\RT7700\emlib\inc\em_timer.h" "C:\Users\Administrator\Desktop\fww\RT7700\main.c"
+A2=_ "E:\MyWork Space\RT7710\SoftWare\7710_lg_from8600\main.c" "E:\liuc\RT7710\RT7710\main.c"
+A3=_ "E:\MyWorkSpace\RT7710\SoftWare\RT7710\RT7710\emlib\inc\em_gpio.h" ""
+A4=_ "E:\MyWorkSpace\RT7710\SoftWare\RT7710\RT7710\main.c" "D:\fww-cx\按摩椅7710\RT7710\SoftWare\RT7710\RT7710\main.c"
+A5=_ "F:\temp\6036\6036\6036\main.c" "G:\荣泰健康科技股份有限公司工作资料\6036按摩椅\6036\main.c"
+A6=_ "F:\temp\6036\RT7700定版\RT7700\main.c" "F:\temp\6036\6036\6036\main.c"
+Count=7
+SuppressDialog=1

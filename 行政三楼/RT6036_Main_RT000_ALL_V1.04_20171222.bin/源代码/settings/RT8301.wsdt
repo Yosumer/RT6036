@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>RT8301/Debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>218</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1036</ColumnWidth1><ColumnWidth2>276</ColumnWidth2><ColumnWidth3>69</ColumnWidth3></Build>
+      <TerminalIO/>
+      <Find-in-Files>
+        
+        
+        
+      <ColumnWidth0>496</ColumnWidth0><ColumnWidth1>70</ColumnWidth1><ColumnWidth2>850</ColumnWidth2></Find-in-Files>
+    <Debug-Log><ColumnWidth0>18</ColumnWidth0><ColumnWidth1>1384</ColumnWidth1></Debug-Log><SourceBrowser/></Static>
+    <Windows>
+      
+      
+    <Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-31879-29168</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>RT8301</ExpandedNode><ExpandedNode>RT8301/CMSIS</ExpandedNode><ExpandedNode>RT8301/Local</ExpandedNode><ExpandedNode>RT8301/Peripheral</ExpandedNode></NodeDict></Session>
+          </Tab>
+        <Tab><Identity>TabID-7122-8494</Identity><TabName>Source Browser</TabName><Factory>SourceBrowser</Factory><Session><TypeFilter>2147483647</TypeFilter><FileFilter>1</FileFilter></Session></Tab></Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-24560-29305</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-15403-8580</Identity>
+            <TabName>Find in Files</TabName>
+            <Factory>Find-in-Files</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-24523-27924</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\main.c</Filename><XPos>0</XPos><YPos>7661</YPos><SelStart>250306</SelStart><SelEnd>250306</SelEnd></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Timer.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>470</SelStart><SelEnd>470</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Valve.c</Filename><XPos>0</XPos><YPos>84</YPos><SelStart>2459</SelStart><SelEnd>2459</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\CMSIS\DeviceSupport\system_efm32.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>1357</SelStart><SelEnd>1357</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-01364e60><key>iaridepm.enu1</key></Toolbar-01364e60></Sizes></Row0><Row1><Sizes/></Row1></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>627</Bottom><Right>292</Right><x>-2</x><y>-2</y><xscreen>779</xscreen><yscreen>200</yscreen><sizeHorzCX>540972</sizeHorzCX><sizeHorzCY>232019</sizeHorzCY><sizeVertCX>204167</sizeVertCX><sizeVertCY>729698</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>191</Bottom><Right>1442</Right><x>-2</x><y>-2</y><xscreen>1444</xscreen><yscreen>193</yscreen><sizeHorzCX>1002778</sizeHorzCX><sizeHorzCY>223898</sizeHorzCY><sizeVertCX>540972</sizeVertCX><sizeVertCY>232019</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+
